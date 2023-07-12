@@ -19,12 +19,17 @@ import ChangePassword from './Components/PageParametre/ChangePassword';
 import ChangeInfo from './Components/PageParametre/ChangeInfo';
 import ShowReclamation from './UserOperation/Reclamation/ShowReclamation';
 import AjouterReclamation from './UserOperation/Reclamation/AjouterReclamation'
+import ShowDemande from './UserOperation/Demande/ShowDemande';
+// import { required } from 'react-admin';
 
 
-
-
+// const express=required("express")
+// const app=express();
+// const cors = require("cors");
+// app.use(cors());
 
 function App() {
+
   return (
     <>
       <Router>
@@ -44,7 +49,8 @@ function App() {
           <Route path="/lesreclamations" component={ShowReclamation}/>
           <Route path="/add-reclamation-user" component={AjouterReclamation}/>
           <Route path="/edit-reclamation-user/:id" component={AjouterReclamation}/>
- 
+
+          <Route path="/lesdemandes" component={ShowDemande}/>
 
           <Route path='/parametre' exact={true} component={Parametre}/>
           <Route path='/changePassword' exact={true} component={ChangePassword}/>
