@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from '../../images/logoMAE.png';
+
 
 import {Navbar, Collapse,Nav, NavLink, NavbarToggler,Button,NavItem } from 'reactstrap';
 import AuthenticationService from '../../services/AuthenticationService';
@@ -62,7 +62,7 @@ export class Navigate extends Component {
     return (
         <Navbar color="dark" dark expand="md">
         <Nav className="mr-auto">
-             <NavLink href="#home"><img src={logo} /></NavLink>
+             <NavLink href="#home"></NavLink>
          </Nav>
     
              <NavbarToggler onClick={this.toggle}/>
@@ -72,20 +72,16 @@ export class Navigate extends Component {
           
           <Nav className="ml-auto" navbar>
           
-            
+          
            
-            <NavLink href="#home">Home</NavLink>
-            <NavLink href="#features">Particuliers</NavLink>
-            <NavLink href="#pricing">Contact</NavLink>
+  
             <NavItem>
               <NavLink href="#" onClick={this.signOut}>SignOut</NavLink>
             </NavItem>            
           </Nav>               
         ) : (
             <Nav className="ml-auto" navbar>
-            <NavLink href="#home">Home</NavLink>
-            <NavLink href="#features">Particuliers</NavLink>
-            <NavLink href="#pricing">Contact</NavLink>
+        
             <Button variant="success" href="/signin" type='submit'>Se Connecter</Button>
             </Nav>
         )

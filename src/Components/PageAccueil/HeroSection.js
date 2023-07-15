@@ -10,8 +10,8 @@ function HeroSection() {
     <Navigate/>
     <div className='hero-container'>
     <video src={Video} autoPlay loop muted no repeate />
-      <h3>La MAE Assurance</h3>
-      <p>Assurance accompagne les personnes</p>
+      <h3>Bienvenue a notre site web </h3>
+      <p></p>
       <div className='hero-btns'>
           <Button className='btns' buttonStyle='btn--outline'
                 buttonSize='btn--large'>

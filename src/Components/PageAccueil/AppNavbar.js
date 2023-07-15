@@ -63,10 +63,7 @@ class AppNavbar extends Component {
     return <Navbar color="dark" dark expand="md">
         
     <Nav className="mr-auto">
-      <NavLink href="/home">Home</NavLink>
-      {this.state.showUser && <NavLink href="/parametre">User</NavLink>}
-      {this.state.showAdmin && <NavLink href="/admin">Admin</NavLink>}
-      <NavLink href="/add-reclamation-user">reclamation</NavLink>
+     
     </Nav>
     <NavbarToggler onClick={this.toggle}/>
     <Collapse isOpen={this.state.isOpen} navbar>
@@ -74,6 +71,9 @@ class AppNavbar extends Component {
         this.state.login ? (
           
           <Nav className="ml-auto" navbar>
+     
+  
+              <NavLink href="/add-reclamation-user">reclamation</NavLink>
             <NavItem>
                 <NavbarText>
                   Signed in as: <a href="/profile">{this.state.username}</a>
@@ -86,6 +86,7 @@ class AppNavbar extends Component {
           </Nav>               
         ) : (
           <Nav className="ml-auto" navbar>
+              
             <NavItem>
               <NavLink href="/signin">Login</NavLink>
             </NavItem>
