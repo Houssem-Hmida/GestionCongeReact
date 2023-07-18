@@ -13,7 +13,7 @@ const ListUser = () => {
     const pages = new Array(numberOfPages).fill(null).map((v, i) => i);
 
     useEffect(() => {
-        fetch(`http://localhost:8080/api/auth/admin/user?page=${pageNumber}&size=5`)
+        fetch(`http://localhost:8091/api/auth/admin/user?page=${pageNumber}&size=5`)
           .then((response) => response.json())
           .then(({ totalPages, users }) => {
             setUsers(users);
@@ -43,9 +43,9 @@ const ListUser = () => {
         <div className='main__container'>
 
             <h2 className = "main__title"> Tous Les utulisateur </h2>
-            <a href='http://localhost:8080/api/auth/admin/export'><FaFileCsv size={50}/></a>
-            <a href='http://localhost:8080/api/auth/admin/users/export/pdf'><BsFilePdfFill size={50}/></a>
-            <a href='http://localhost:8080/api/auth/admin/users/export/excel'><BsFileEarmarkExcelFill size={50}/></a>
+            <a href='http://localhost:8091/api/auth/admin/export'><FaFileCsv size={50}/></a>
+            <a href='http://localhost:8091/api/auth/admin/users/export/pdf'><BsFilePdfFill size={50}/></a>
+            <a href='http://localhost:8091/api/auth/admin/users/export/excel'><BsFileEarmarkExcelFill size={50}/></a>
             
 
             <br></br>
@@ -65,7 +65,6 @@ const ListUser = () => {
                             <th className='th1'> Date d'ajout</th>
                             <th className='th1'> CIN</th>
                             <th className='th1'> Email</th>
-                            <th className='th1'> Password</th>
                             <th> action</th>
                 </thead>
                 <tbody>
@@ -84,7 +83,6 @@ const ListUser = () => {
                             <td>{user.dateajout}</td>
                             <td>{user.cin}</td>
                             <td>{user.email}</td>
-                            <td>{user.password}</td>
                                 <td>
                                     <Link className="btn btn-info" to={`/edit-user/${user.id}`} >Update</Link>
                                     <button className = "btn btn-danger" onClick = {() => deleteUser(user.id)}

@@ -21,10 +21,10 @@ deleteUser(id){
 return axios.delete(USER_API_BASE_URL + '/' + id);
 }
 getByCin(cin){
-return axios.get('http://localhost:8080/api/auth/admin/ByCin/'+ cin);
+return axios.get('http://localhost:8091/api/auth/admin/ByCin/'+ cin);
 }
 getexport(){
-return axios.get("http://localhost:8080/api/auth/admin/export");
+return axios.get("http://localhost:8091/api/auth/admin/export");
 }
 changePassword(username, user){
 return axios.put("http://localhost:8091/api/auth/changePassword/"+ username, user);

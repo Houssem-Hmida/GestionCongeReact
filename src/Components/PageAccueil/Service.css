@@ -1,9 +1,10 @@
+Nour Farjallah
 .fontH4{
 	color: #303030;
 }
 .servives{
     
-	width: 100%;
+	width: auto;
 	display: flex;
 	height: 760px;
 	flex-direction: column-reverse;
@@ -18,15 +19,20 @@
 .s-heading{
 	
 	height: 100%;
-	margin:20px;
+	margin:auto;
 	text-shadow: 2px 2px 10px rgba(0,0,0,0.05);
 }
 .s-heading h3{
 	font-weight: 600;
 	letter-spacing: 2px;
 	text-align: center;
-	font-size:2.5rem;
-	
+	font-size:3rem;
+	color: #17aabdd3;
+  
+  	font-family: "Gentium Book Basic", serif;
+  	text-shadow:0px 1px 0px rgba(17, 212, 234, 0.1); 
+  	-webkit-font-smoothing: antialiased;
+  	
  
 }
 .s-heading h3 font{
@@ -35,8 +41,11 @@
 .services-container{
    
     height: 100%;
-    width: 100%;
-    margin: 0 auto;
+    width: 200%;
+	left : 50% ;
+	top: 50% ;
+	transform: translate(-50%, -50%);
+    margin:  auto;
     background-color: #FFFFFF;
 	display: flex;
 	justify-content: center;
@@ -91,5 +100,3 @@
 	box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.233);
 	background-color:#FFFFFF;
 }
-
- 

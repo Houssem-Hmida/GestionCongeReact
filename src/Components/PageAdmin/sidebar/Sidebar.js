@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./Sidebar.css";
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
-import logo from "../../../images/logoMAE.png";
+import logo from "../../../images/avaxia.jpg";
 import GroupIcon from '@material-ui/icons/Group';
 import HomeIcon from '@material-ui/icons/Home';
 import CloseIcon from '@material-ui/icons/Close';
@@ -29,7 +29,7 @@ const history = useHistory();
     <div className={sidebarOpen ? "sidebar-responsive": ""} id="sidebar">
         <div className='sidebar__title'>
             <div className='sidebar__img'>
-                <img src={logo} alt='imge'/> 
+            
                 
             </div>
             <CloseIcon
@@ -47,39 +47,23 @@ const history = useHistory();
                 <GroupIcon className="sidebarIcon"/>
                 <a href='/Listusers'>Les Users</a>
             </div>
-            <div className='sidebar__link'>
-                <StoreIcon className="sidebarIcon"/>
-                <a href='/produits'>Les Produits</a>
-            </div>
-            <div className='sidebar__link'>
-                <AssignmentIcon className="sidebarIcon"/>
-                <a href='/contrats'>Les Contrats</a>
-            </div>
-            <div className='sidebar__link'>
-                <InfoIcon className="sidebarIcon"/>
-                <a href='/sinistres'>Les Sinistres</a>
-            </div>
+        
             <div className='sidebar__link'>
                 <AssignmentLateIcon className="sidebarIcon"/>
                 <a href='/reclamations'>Les Réclamations</a>
             </div>
             <div className='sidebar__link'>
                 <CreateIcon className="sidebarIcon"/>
-                <a href='/ListeSujet'>Les Sujets</a>
+                <a href='/ListeSujet'>Les demande </a>
             </div>
+         
             <div className='sidebar__link'>
-                <CommentIcon className="sidebarIcon"/>
-                <a href='/Commentaires'>Les Commentaires</a>
+                <CreateIcon className="sidebarIcon"/>
+                <a href='/ListeSujet'>Les feedback </a>
             </div>
-            <div className='sidebar__link'>
-                <FeedbackIcon className="sidebarIcon"/>
-                <a href='/suggestions'>Les Suggestions</a>
-            </div>
-            <div className='sidebar__link'>
-                <BsPencilSquare className="sidebarIcon"/>
-                <a href='/reunions'>Les Reunions</a>
-            </div>
-           
+         
+        
+         
 
             <div className='sidebar__logout'>
                 <PowerSettingsNewIcon className="sidebarIcon"/>

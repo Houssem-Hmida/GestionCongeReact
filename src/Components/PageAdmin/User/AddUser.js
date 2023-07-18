@@ -25,6 +25,7 @@ const AddUser = () => {
 
         if (id) {
             AdminUserService.updateUser(id,user).then((response) => {
+                console.log(id);
                 history.push('/Listusers')
             }).catch(error => {
                 console.log(error)
@@ -53,8 +54,8 @@ const AddUser = () => {
             setDatenaissance(response.data.datenaissance)
             setCodepostal(response.data.codepostal)
             setTelephone(response.data.telephone)
-            setVille(response.data.Ville)
-            setCin(response.data.Cin)
+            setVille(response.data.ville)
+            setCin(response.data.cin)
             setEmail(response.data.email)
             setPassword(response.data.password)
 

@@ -10,6 +10,7 @@ import AppNavbar from './AppNavbar';
 import GoogleLogin from 'react-google-login';
 import FacebookLogin from 'react-facebook-login';
 import { Input } from 'reactstrap';
+import e from 'cors';
 
 class Login extends Component {
 
@@ -52,8 +53,10 @@ class Login extends Component {
                   sessionStorage.setItem("prenomloign", respp.prenom);
                 if(respp.roles=="ROLE_ADMIN"){
                   this.props.history.push('/admin');
-                }else{
-                  this.props.history.push('/parametre');
+                }else if (respp.roles=="ROLE_RH"){
+                  this.props.history.push('/admin');
+                }else {
+                  this.props.history.push('/user');
                 }
                   
                   

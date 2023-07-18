@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import Bservice from './Bservice';
 import './Service.css';
 import Img1 from '../../images/f.jpg';
-import Img2 from '../../images/sinistre.jpg';
+import Img2 from '../../images/logo1213.jpg';
 import styled from "styled-components";
-import Img3 from '../../images/segg2.jpg';
+import Img3 from '../../images/logo1212.png';
 import { mobile } from "../../responsive";
 import './Service.css';
 import { SpeedDial, SpeedDialAction, SpeedDialIcon } from '@mui/material';
@@ -34,18 +34,15 @@ const UserPage = () =>{
           <h3>Vos opérations</h3>
           </div>
             <Container id='Nos service' className='cont_side'>
-              <Link to={'/'}><Bservice image={Img1} name="En Cas De Réclamation" /></Link>
-              <Link to={'/'}><Bservice image={Img2} name="En Cas De Sinistre " /></Link>
-              <Link to={'/'}><Bservice image={Img3} name="En Cas De Suggestion" /></Link>
-          
+            <Link to={'/add-reclamation-user'}><Bservice image={Img1} name="En Cas De Réclamation" /></Link>
+              <Link to={'/lesdemandes'}><Bservice image={Img2} name="Demande congé" /></Link>
+              <Link to={'/add-feedback-user'}><Bservice image={Img3} name="feedback" /></Link>
               <SpeedDial ariaLabel='Navigation speed dial' 
                  sx={{position:'absolute', bottom:16, right: 16, color:'green'}}
                  icon={<SpeedDialIcon color="success"/>}>
-                   <SpeedDialAction icon={<ChatOutlinedIcon/>} tooltipTitle='Chat' href="/"/>
-                   <SpeedDialAction icon={<MapIcon/>} tooltipTitle='Agence' href="/"/>
-                   <SpeedDialAction icon={<ForumIcon/>} tooltipTitle='Forum de discussion' href="/" />
-                   <SpeedDialAction icon={<AiTwotoneSnippets/>} tooltipTitle='Declaration des produit' href="/" />
-                   <SpeedDialAction icon={<AiFillSetting/>} tooltipTitle='Parametre' href="/" />
+                   <SpeedDialAction icon={<ChatOutlinedIcon/>} tooltipTitle='Chat' href="/chat"/>
+                   <SpeedDialAction icon={<MapIcon/>} tooltipTitle='map' href="/map"/>
+                   <SpeedDialAction icon={<AiFillSetting/>} tooltipTitle='Parametre' href="/parametre" />
                    
                  </SpeedDial>
         </Container>

@@ -32,7 +32,7 @@ const ListReclamation = () => {
     const pages = new Array(numberOfPages).fill(null).map((v, i) => i);
 
     useEffect(() => {
-        fetch(`http://localhost:8080/Api/Reclamation?page=${pageNumber}&size=5`)
+        fetch(`http://localhost:8091/Api/Reclamation?page=${pageNumber}&size=5`)
           .then((response) => response.json())
           .then(({ totalPages, reclamations }) => {
             setReclamation(reclamations);
@@ -67,9 +67,9 @@ const ListReclamation = () => {
                 <Table className={classes.table} aria-label="simple table">
                     <TableHead className={classes.table}>
                         <TableRow className={classes.table}>
-                            <TableCell className={classes.table}><h6>Numéro De Declaration </h6></TableCell>
+                        <TableCell className={classes.table}><h6>Numéro De Declaration </h6></TableCell>
+                  
                             <TableCell className={classes.thead}><h6>Message </h6></TableCell>
-                            <TableCell className={classes.thead}><h6>Objet </h6></TableCell>
                             <TableCell className={classes.action}><h6> Actions </h6></TableCell>
                         </TableRow>
                     </TableHead>
@@ -77,13 +77,12 @@ const ListReclamation = () => {
                         {
                             reclamations.map(
                                 reclamation =>
-                                    <TableRow key={reclamation.id_R}>
-                                        <TableCell> {reclamation.id_R} </TableCell>
-                                        <TableCell> {reclamation.message}  </TableCell>
-                                        <TableCell>{reclamation.objet} </TableCell>
+                                    <TableRow key={reclamation.idRec}>
+                                        <TableCell> {reclamation.idRec}  </TableCell>
+                                        <TableCell>{reclamation.descriptionReclamation} </TableCell>
                                         <TableCell>
-                                            <Link className="btn btn-info" to={`/edit-reclamation/${reclamation.id_R}`} >Update</Link>
-                                            <button className="btn btn-danger" onClick={() => deleteReclamation(reclamation.id_R)}
+                                            <Link className="btn btn-info" to={`/edit-reclamation/${reclamation.idRec}`} >Update</Link>
+                                            <button className="btn btn-danger" onClick={() => deleteReclamation(reclamation.idRec)}
                                                 style={{ marginLeft: "10px" }}> Delete</button>
                                         </TableCell>
                                     </TableRow>
