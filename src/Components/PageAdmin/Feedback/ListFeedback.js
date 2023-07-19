@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './ListReclamation.css';
+import './ListeFeedback.css';
 import ReclamationService from '../../../services/AdminService/ReclamationService';
 import { makeStyles } from '@material-ui/core/styles';
 import { Table } from '@material-ui/core';
@@ -61,16 +61,16 @@ const ListReclamation = () => {
     const classes = useStyles();
     return (
         <div className='main__container'>
-            <h2 className="main__title"> Tous Les Reclamation </h2> <br></br>
-            <Link to="/add-reclamation" className="btn btn-outline-primary" > Ajouter Reclamation </Link> <br></br>
+            <h2 className="main__title"> Tous Les Feedback </h2>
+            {/* <Link to="/add-reclamation" className="btn btn-primary mb-2" > Ajouter Reclamation </Link> */}
             <TableContainer component={Paper}>
                 <Table className={classes.table} aria-label="simple table">
                     <TableHead className={classes.table}>
                         <TableRow className={classes.table}>
-                        <TableCell className={classes.table}><h6>Numéro De Declaration </h6></TableCell>
+                        <TableCell className={classes.table}><h6>ID </h6></TableCell>
                   
-                            <TableCell className={classes.thead}><h6>Message </h6></TableCell>
-                            <TableCell className={classes.action}><h6> Actions </h6></TableCell>
+                            <TableCell className={classes.thead}><h6>Feedback </h6></TableCell>
+                            <TableCell className={classes.action}><h6> User </h6></TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -81,8 +81,8 @@ const ListReclamation = () => {
                                         <TableCell> {reclamation.idRec}  </TableCell>
                                         <TableCell>{reclamation.descriptionReclamation} </TableCell>
                                         <TableCell>
-                                            <Link className="btn btn-outline-success" to={`/edit-reclamation/${reclamation.idRec}`} >Update</Link>
-                                            <button className="btn btn-outline-danger" onClick={() => deleteReclamation(reclamation.idRec)}
+                                            <Link className="btn btn-info" to={`/edit-reclamation/${reclamation.idRec}`} >Update</Link>
+                                            <button className="btn btn-danger" onClick={() => deleteReclamation(reclamation.idRec)}
                                                 style={{ marginLeft: "10px" }}> Delete</button>
                                         </TableCell>
                                     </TableRow>
@@ -90,7 +90,7 @@ const ListReclamation = () => {
                         }
                     </TableBody>
                 </Table>
-            </TableContainer><br></br>
+            </TableContainer>
             <button onClick={gotoPrevious}>Previous</button>
               {pages.map((pageIndex) => (
              <button key={pageIndex} onClick={() => setPageNumber(pageIndex)}>

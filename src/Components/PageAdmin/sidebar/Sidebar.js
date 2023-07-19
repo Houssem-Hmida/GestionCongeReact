@@ -59,7 +59,7 @@ const history = useHistory();
          
             <div className='sidebar__link'>
                 <CreateIcon className="sidebarIcon"/>
-                <a href='/ListeSujet'>Les feedback </a>
+                <a href='/feedbacks'>Les feedback </a>
             </div>
          
         

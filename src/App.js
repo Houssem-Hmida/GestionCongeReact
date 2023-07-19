@@ -22,6 +22,9 @@ import ChangeInfo from './Components/PageParametre/ChangeInfo';
 import ShowReclamation from './UserOperation/Reclamation/ShowReclamation';
 import AjouterReclamation from './UserOperation/Reclamation/AjouterReclamation'
 import ShowDemande from './UserOperation/Demande/ShowDemande';
+import AjouterFeedback from './UserOperation/Feedback/AjouterFeedback'
+import lesfeedbacks from'./UserOperation/Feedback/Showfeedback'
+import ListFeedback from './Components/PageAdmin/Feedback/ListeFeedbackAdmin'
 import map from './UserOperation/map';
 // import { required } from 'react-admin';
 
@@ -48,25 +51,31 @@ function App() {
           <Route path='/profile' exact={true} component={Profile}/>
           <Route path='/user' exact={true} component={UserPage}/>
           <Route path='/pm' exact={true} component={ProjectManagerPage}/>
+          {/* user reclamation et chat  */}
           <Route path='/chat' exact={true} component={ChatRoom}/>
           <Route path="/lesreclamations" component={ShowReclamation}/>
           <Route path="/add-reclamation-user" component={AjouterReclamation}/>
           <Route path="/edit-reclamation-user/:id" component={AjouterReclamation}/>
-
+          {/* user feedback */}
+          <Route path="/add-feedback-user" component={AjouterFeedback}/>
+          <Route path="/lesfeedbacks" component={lesfeedbacks}/>
+          {/* user demande  */}
           <Route path="/lesdemandes" component={ShowDemande}/>
-
+          {/* user pw */}
           <Route path='/parametre' exact={true} component={Parametre}/>
           <Route path='/changePassword' exact={true} component={ChangePassword}/>
           <Route path='/ChangeInfo' exact={true} component={ChangeInfo}/>
-
+          {/* admin user */}
           <Route path='/Listusers' exact={true} component={ListUserAdmin}/>
           <Route path='/add-user' exact={true} component={AddUserAdmin}/>
           <Route path="/edit-user/:id" component={AddUserAdmin}/>
-
+          {/* admin reclamation */}
           <Route path="/reclamations" component={ListReclamationAdmin}/>
           <Route path="/add-reclamation" component={AddReclamationAdmin}/>
           <Route path="/edit-reclamation/:id" component={AddReclamationAdmin}/>
           <Route path="/map" component={map} />
+          {/* admin feedback */}
+          <Route path="/feedbacks" component={ListFeedback}/>
           
           
         </Switch>

@@ -3,7 +3,6 @@ import { Link, useHistory, useParams } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReclamationService from '../../services/AdminService/ReclamationService';
 import AppNavbar from '../../Components/PageAccueil/AppNavbar';
-import './reclamation.css'
 
 const ShowReclamation = () => {
 
@@ -42,7 +41,7 @@ const ShowReclamation = () => {
         <>
         <AppNavbar/>
         <div className='main__container'>
-            <h1 className = "main__title"> Vos réclamations </h1>
+            <h2 className = "main__title"> Voici Votre Feedback </h2>
             
           
             {
@@ -51,12 +50,12 @@ const ShowReclamation = () => {
                             <section className="sujet">
                             <article>
                             <div key = {reclamation.id_R}> 
-                            <p> La réclamation est criée  {reclamation.dateDeclaration} par <div class="btn btn-light">{reclamation.username}</div> </p><br></br>
-                            <p> {reclamation.descriptionReclamation}  Avec le numéro de réclamation : </p>  {reclamation.id_R}
+                            <p> La réclamation est criée  {reclamation.dateDeclaration} par <div className="btn btn-outline-primary">{reclamation.username}</div> </p><br></br>
+                            <p> {reclamation.descriptionReclamation} </p> Avec le numéro de réclamation : {reclamation.id_R}
 
                             <p>             
-                            <Link className="btn btn-outline-success" to={`/edit-reclamation-user/${reclamation.idRec}`} >Update</Link>
-                      <button className = "btn btn-outline-danger" onClick = {() =>deleteReclamation(reclamation.idRec)}
+                            <Link className="btn btn-info" to={`/edit-reclamation-user/${reclamation.idRec}`} >Update</Link>
+                      <button className = "btn btn-danger" onClick = {() =>deleteReclamation(reclamation.idRec)}
                       style = {{marginLeft:"10px"}}> Delete</button>
  
                   </p>
@@ -65,14 +64,13 @@ const ShowReclamation = () => {
                         )
                     }
     </div>
-    <div class="page-link" >
-             <button onClick={gotoPrevious} >Previous</button>
+    <button onClick={gotoPrevious}>Previous</button>
               {pages.map((pageIndex) => (
              <button key={pageIndex} onClick={() => setPageNumber(pageIndex)}>
              {pageIndex + 1}
              </button>
                          ))}
-            <button onClick={gotoNext}>Next</button></div>
+            <button onClick={gotoNext}>Next</button>
     </>
     )
 }

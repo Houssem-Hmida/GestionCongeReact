@@ -34,7 +34,7 @@ const UserPage = () =>{
           <h3>Vos opérations</h3>
           </div>
             <Container id='Nos service' className='cont_side'>
-            <Link to={'/add-reclamation-user'}><Bservice image={Img1} name="En Cas De Réclamation" /></Link>
+            <Link to={'/add-reclamation-user'}><Bservice image={Img1} name=" Réclamation" /></Link>
               <Link to={'/lesdemandes'}><Bservice image={Img2} name="Demande congé" /></Link>
               <Link to={'/add-feedback-user'}><Bservice image={Img3} name="feedback" /></Link>
               <SpeedDial ariaLabel='Navigation speed dial' 

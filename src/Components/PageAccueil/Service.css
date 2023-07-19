@@ -21,6 +21,7 @@ Nour Farjallah
 	height: 100%;
 	margin:auto;
 	text-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+	display: flex
 }
 .s-heading h3{
 	font-weight: 600;
@@ -28,7 +29,8 @@ Nour Farjallah
 	text-align: center;
 	font-size:3rem;
 	color: #17aabdd3;
-  
+	padding: auto;
+	margin: auto;
   	font-family: "Gentium Book Basic", serif;
   	text-shadow:0px 1px 0px rgba(17, 212, 234, 0.1); 
   	-webkit-font-smoothing: antialiased;
@@ -45,7 +47,8 @@ Nour Farjallah
 	left : 50% ;
 	top: 50% ;
 	transform: translate(-50%, -50%);
-    margin:  auto;
+    
+	padding: auto ;
     background-color: #FFFFFF;
 	display: flex;
 	justify-content: center;
