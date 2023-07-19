@@ -37,6 +37,7 @@ const UserPage = () =>{
             <Link to={'/add-reclamation-user'}><Bservice image={Img1} name=" Réclamation" /></Link>
               <Link to={'/lesdemandes'}><Bservice image={Img2} name="Demande congé" /></Link>
               <Link to={'/add-feedback-user'}><Bservice image={Img3} name="feedback" /></Link>
+              <Link to={'/calendrier'}><Bservice image={Img2} name="schedule" /></Link>
               <SpeedDial ariaLabel='Navigation speed dial' 
                  sx={{position:'absolute', bottom:16, right: 16, color:'green'}}
                  icon={<SpeedDialIcon color="success"/>}>

@@ -24,7 +24,8 @@ import AjouterReclamation from './UserOperation/Reclamation/AjouterReclamation'
 import ShowDemande from './UserOperation/Demande/ShowDemande';
 import AjouterFeedback from './UserOperation/Feedback/AjouterFeedback'
 import lesfeedbacks from'./UserOperation/Feedback/Showfeedback'
-import ListFeedback from './Components/PageAdmin/Feedback/ListeFeedbackAdmin'
+import ListFeedback from './Components/PageAdmin/Feedback/ListeFeedbackAdmin';
+import Calendrier from "./Calendrier/Calendrier";
 import map from './UserOperation/map';
 // import { required } from 'react-admin';
 
@@ -76,8 +77,8 @@ function App() {
           <Route path="/map" component={map} />
           {/* admin feedback */}
           <Route path="/feedbacks" component={ListFeedback}/>
-          
-          
+           {/*  calendar user   */}
+          <Route path="/calendrier" component={Calendrier} />
         </Switch>
       </Router>
     </>

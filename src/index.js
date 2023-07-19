@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { required } from 'react-admin';
+import 'rsuite/dist/rsuite-no-reset.min.css';
 
 
 // const express=required("express")
