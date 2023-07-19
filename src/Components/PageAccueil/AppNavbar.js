@@ -74,6 +74,7 @@ class AppNavbar extends Component {
      
   
               <NavLink href="/add-reclamation-user">reclamation</NavLink>
+             
             <NavItem>
                 <NavbarText>
                   Signed in as: <a href="/profile">{this.state.username}</a>
@@ -81,6 +82,7 @@ class AppNavbar extends Component {
             </NavItem>
             <NavItem>
               <NavLink href="#" onClick={this.signOut}>SignOut</NavLink>
+              <NavLink href="/calendar">calendar</NavLink>
             </NavItem>
      
           </Nav>               

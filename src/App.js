@@ -12,7 +12,7 @@ import Profile from './Components/PageAccueil/Profile'
 import UserPage from './Components/PageAccueil/UserPage';
 import ProjectManagerPage from './Components/PageAccueil/ProjectManagerPage';
 
-
+import Calendrier from "./Calendrier/Calendrier";
 
 import Parametre from './Components/PageParametre/Parametre';
 import ChangePassword from './Components/PageParametre/ChangePassword';
@@ -20,6 +20,7 @@ import ChangeInfo from './Components/PageParametre/ChangeInfo';
 import ShowReclamation from './UserOperation/Reclamation/ShowReclamation';
 import AjouterReclamation from './UserOperation/Reclamation/AjouterReclamation'
 import ShowDemande from './UserOperation/Demande/ShowDemande';
+import { BsCalendar } from 'react-icons/bs';
 // import { required } from 'react-admin';
 
 
@@ -50,6 +51,7 @@ function App() {
           <Route path="/add-reclamation-user" component={AjouterReclamation}/>
           <Route path="/edit-reclamation-user/:id" component={AjouterReclamation}/>
 
+          <Route path="/calendar" component = {Calendrier} />
           <Route path="/lesdemandes" component={ShowDemande}/>
 
           <Route path='/parametre' exact={true} component={Parametre}/>
