@@ -24,18 +24,10 @@ console.log(demandes)
 
 
 const getTodoList = (date, demandes) => {
-  const day = date.getDate();
 
-  switch (day) {
-    // You can update the cases based on your specific logic
-    case 3:
-      return demandes.filter(demand => demand.date_debut === '2023-07-03');
-    case 18:
-      return demandes.filter(demand => demand.date_debut === '2023-07-18');
-    case 20: demandes.filter(demand => demand.date_debut ==='2023-07-20' );
-    default:
-      return [];
-  }
+  const formattedDate = date.toISOString().slice(0, 10);
+  const filteredDemandes = demandes.filter(demand => demand.date_debut === formattedDate);
+  return filteredDemandes;
 }
 
 
